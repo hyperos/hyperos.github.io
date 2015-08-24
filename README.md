@@ -1,4 +1,6 @@
-# hyperos.github.io
+## HyperOS
+
+**caution** mostly vaporware, don't take this seriously yet
 
 ### technical features
 
