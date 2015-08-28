@@ -5,7 +5,7 @@ caution: mostly vaporware, don't take this seriously yet
 
 HyperOS is a set of components that make it easy to quickly download and run containerized software on top of version controlled data in a reproducible way without sacrificing performance.
 
-It's made and maintained by the team that works on [dat], a dataset version control tool. We build tools to improve scientific research reproducibility and needed a way to make container runtime tools accessible for scientific use cases like sharing and running version controlled code + data pipelines.
+It's made and maintained by the team that works on [dat](http://dat-data.com), a dataset version control tool. We build tools to improve scientific research reproducibility and needed a way to make container runtime tools accessible for scientific use cases like sharing and running version controlled code + data pipelines.
 
 HyperOS works on Linux, Mac and soon Windows and is intended to be used primarily as an end-user CLI tool on workstations.
 
