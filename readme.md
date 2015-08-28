@@ -3,17 +3,18 @@ caution: mostly vaporware, don't take this seriously yet
 
 ![logo](hyperos.png)
 
-HyperOS is a set of components that implement a container runtime with version control features and that focuses on making it easy to quickly download and run compute pipelines on top of data in a reproducible way without sacrificing performance.
+HyperOS is a set of components that make it easy to quickly download and run containerized software on top of version controlled data in a reproducible way without sacrificing performance.
 
-Whereas other container tools tend to focus on secure cloud deployment use cases, HyperOS is more like a cross platform container package manager designed to fix problems with dependency management. It works on Linux, Mac and soon Windows and is intended to be used primarily as an end-user CLI tool on workstations.
+Whereas other container tools tend to focus on secure cloud deployment use cases, HyperOS is more like a cross platform container package manager designed to do software + data dependency management. It works on Linux, Mac and soon Windows and is intended to be used primarily as an end-user CLI tool on workstations.
 
 ### components
 
-- [hypercore](https://github.com/maxogden/hypercore) - a distribution of tinycore linux that includes our remote fs mounting daemon
-- [hyperfuse](https://github.com/mafintosh/hyperfuse) - expose a filesystem over tcp or stdio
-- [hyperfused](https://github.com/mafintosh/hyperfused) - mount a remote hyperfuse drive over tcp or stdio (C daemon)
 - [hyperfs](https://www.npmjs.com/package/hyperfs) - content-addressable userspace union file system
 - [hyperlog](https://www.npmjs.com/package/hyperlog) - merkle DAG that replicates based on scuttlebutt logs and causal linking
+- [hypercore](https://github.com/maxogden/hypercore) - a distribution of tinycore linux that includes our remote fs mounting daemon hyperfused
+- [hyperfuse](https://github.com/mafintosh/hyperfuse) - expose a filesystem over tcp or stdio
+- [hyperfused](https://github.com/mafintosh/hyperfused) - mount a remote hyperfuse drive over tcp or stdio (C daemon)
+- [mini-container](https://github.com/mafintosh/mini-container) - a minimal container runtime that does very few things
 
 ### technical features
 
