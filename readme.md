@@ -28,7 +28,7 @@ Whereas other container tools tend to focus on secure cloud deployment use cases
 ### design goals
 
 - encourage code reproducibility by making a cross platform container runtime with a content addressable filesystem easy to use
-- support running on mac, linux, and windows
+- support running on mac, linux, and windows without any heavy dependencies (e.g. no kernel extensions or build chains)
 - don't sacrifice performance (e.g. don't run in virtualbox, instead use fast kernel level hypervisors)
 - no large dependencies, making it fast to install and run (e.g. no virtualbox)
 - unix philosophy: be composable by focusing on one thing: removing software dependency conflict issues
