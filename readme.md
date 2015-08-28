@@ -13,9 +13,9 @@ HyperOS works on Linux, Mac and soon Windows and is intended to be used primaril
 
 - [hyperfs](https://www.npmjs.com/package/hyperfs) - content-addressable userspace union file system
 - [hyperlog](https://www.npmjs.com/package/hyperlog) - merkle DAG that replicates based on scuttlebutt logs and causal linking
-- [hypercore](https://github.com/maxogden/hypercore) - a distribution of tinycore linux that includes our remote fs mounting daemon hyperfused
 - [hyperfuse](https://github.com/mafintosh/hyperfuse) - expose a filesystem over tcp or stdio
 - [hyperfused](https://github.com/mafintosh/hyperfused) - mount a remote hyperfuse drive over tcp or stdio (C daemon)
+- [hypercore](https://github.com/maxogden/hypercore) - a distribution of tinycore linux that includes hyperfused
 - [mini-container](https://github.com/mafintosh/mini-container) - a minimal container runtime that does very few things
 
 ### technical features
