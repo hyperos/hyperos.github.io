@@ -11,7 +11,7 @@ Whereas other container tools tend to focus on secure cloud deployment use cases
 - [hypercore](https://github.com/maxogden/hypercore) - a distribution of tinycore linux that includes our remote fs mounting daemon
 - [hyperfuse](https://github.com/mafintosh/hyperfuse) - expose a filesystem over tcp or stdio
 - [hyperfused](https://github.com/mafintosh/hyperfused) - mount a remote hyperfuse drive over tcp or stdio (C daemon)
-- [hyperfs](https://www.npmjs.com/package/hyperfs) - content-addressable union file system
+- [hyperfs](https://www.npmjs.com/package/hyperfs) - content-addressable userspace union file system
 - [hyperlog](https://www.npmjs.com/package/hyperlog) - merkle DAG that replicates based on scuttlebutt logs and causal linking
 
 ### technical features
