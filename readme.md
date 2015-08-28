@@ -1,3 +1,4 @@
+
 caution: mostly vaporware, don't take this seriously yet
 
 ![logo](hyperos.png)
@@ -27,10 +28,12 @@ Whereas other container tools tend to focus on secure cloud deployment use cases
 
 ### design goals
 
-- encourage code reproducibility by making a cross platform container runtime with a content addressable filesystem easy to use
-- support running on mac, linux, and windows without any heavy dependencies (e.g. no kernel extensions or build chains)
+- encourage code reproducibility by making a cross platform container host environment with a content addressable filesystem easy to use
+- be container runtime agnostic, e.g. support [runc](https://github.com/opencontainers/runc), [mini-container](https://github.com/mafintosh/mini-container) and any others depending on the use case
+- secure code sandboxing is not a goal of this project, we instead delegate that responsibility to the container runtime
+- support mac, linux, and windows without any heavy dependencies (e.g. no kernel extensions or build chains)
 - don't sacrifice performance (e.g. don't run in virtualbox, instead use fast kernel level hypervisors)
 - no large dependencies, making it fast to install and run (e.g. no virtualbox)
 - unix philosophy: be composable by focusing on one thing: removing software dependency conflict issues
 - use alongside [dat](http://dat-data.com) (also built on hyperfs) to version code and data together
-- secure sandboxing is not a design goal, assumes code is trusted (same as npm)
+
