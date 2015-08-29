@@ -1,5 +1,4 @@
-
-caution: mostly vaporware, don't take this seriously yet
+caution: this project is a work in progress
 
 ![logo](hyperos.png)
 
