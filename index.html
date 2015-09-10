@@ -1,1 +1,60 @@
-hi
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/dark-style.css"/>
+  <title>HyperCore Linux</title>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <span class="image"></span>
+      <span class="name">HyperCore Linux</span>
+    </div>
+    <h2>A Tiny Portable Linux Designed For Reproducibility</h2>
+  </header>
+
+  <section id="intro">
+    <p><b>Status</b> - HyperOS is very new, recommended for early adopters only. You can <code>npm install linux -g</code> today to get HyperCore on OS X, but we are still working on additional CLI tools that incorporate the rest of the HyperOS components. Have an idea for a use case? You can chat with us in <code>freenode/#dat</code> or in <a href="https://gitter.im/datproject/discussions">gitter</a>.</p>
+    <p>HyperOS is a set of components that make it easy to quickly download and run containerized software on top of version controlled data in a reproducible way without sacrificing performance.</p>
+    <p>It&apos;s made and maintained by the team that works on <a href="http://dat-data.com">dat</a>, a dataset version control tool. We build tools to improve scientific research reproducibility and working on ways to make container runtime tools accessible to scientific use cases like sharing and running version controlled code + data pipelines.</p>
+    <p>HyperOS supports Linux, Mac and soon Windows and is intended to be used primarily as a end-user CLI tools on workstations.</p>
+    <h3>Components</h3>
+    <ul>
+    <li><a href="https://www.npmjs.com/package/hyperfs">hyperfs</a> - content-addressable userspace union file system</li>
+    <li><a href="https://www.npmjs.com/package/hyperlog">hyperlog</a> - merkle DAG that replicates based on scuttlebutt logs and causal linking</li>
+    <li><a href="https://github.com/mafintosh/hyperfuse">hyperfuse</a> - expose a filesystem over tcp or stdio</li>
+    <li><a href="https://github.com/mafintosh/hyperfused">hyperfused</a> - mount a remote hyperfuse drive over tcp or stdio (C daemon)</li>
+    <li><a href="https://github.com/maxogden/hypercore">hypercore</a> - a distribution of tinycore linux that includes hyperfused</li>
+    <li><a href="https://www.npmjs.com/package/linux">linux</a> - a node wrapper around the Mac OS (and eventually Windows) hypervisor that can download and run the hypercore linux VM</li>
+    <li><a href="https://github.com/mafintosh/mini-container">mini-container</a> - a minimal container runtime that does very few things</li>
+    <li><a href="https://github.com/maxogden/dat">dat</a> - a dataset version control tool, which will eventually incorporate the above components into its workflows</li>
+    </ul>
+    <h3>Technical Features</h3>
+    <ul>
+    <li>runs hypercore, a tiny ramdisk linux VM (~13mb custom tinycore linux)</li>
+    <li>can run hypercore in OS hypervisors on OS X and eventually Windows (xhyve, hyper-v)</li>
+    <li>can run user supplied OS images inside hypercore (containers, either chroot or runc)</li>
+    <li>filesystem in the host is actually a userspace filesystem (hyperfuse) that proxies fs over local network to/from host OS</li>
+    <li>hyperfs is a content-addressable union userspace file system build on top of fuse, hyperlog, leveldb and node</li>
+    <li>thanks to hyperfs files are deduplicated across images, and images are versioned (git-like)</li>
+    <li>can &apos;lazy boot&apos; images, fetching the files on demand needed to execute users code quickly</li>
+    <li>tinycore VM only contains a networking stack and a network fuse daemon (hyperfuse) for mounting data from external hyperfuse</li>
+    </ul>
+    <h3>Design Goals</h3>
+    <ul>
+    <li>encourage code reproducibility by making a cross platform container host environment with a content addressable filesystem easy to use</li>
+    <li>be container runtime agnostic, e.g. support <a href="https://github.com/opencontainers/runc">runc</a>, <a href="https://github.com/mafintosh/mini-container">mini-container</a> and any others depending on the use case</li>
+    <li>secure code sandboxing is not a goal of this project, we instead delegate that responsibility to the container runtime</li>
+    <li>support mac, linux, and windows without any heavy dependencies (e.g. no kernel extensions or user compilation)</li>
+    <li>don&apos;t sacrifice performance (e.g. use fast kernel level hypervisors)</li>
+    <li>no large dependencies, making it fast to install and run (e.g. no virtualbox)</li>
+    <li>unix philosophy: be composable by focusing on one thing: removing software dependency conflict issues</li>
+    </ul>
+  </section>
+  <footer>
+  </footer>
+</body>
+</html>
